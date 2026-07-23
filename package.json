@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "repo para atividades relacionadas ao módulo 4 de devops",
   "main": "index.js",
-  {
-    "scripts": {
-      "test": "echo \"Testes executados com sucesso\""
-    }
+  "scripts": {
+    "test": "echo \"Testes executados com sucesso\""
   },
   "repository": {
     "type": "git",
