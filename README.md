@@ -8,3 +8,8 @@ e Dependabot.
 - Git
 - Node.js
 - npm
+
+## Instalação
+
+```bash
+npm install
