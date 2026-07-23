@@ -32,5 +32,3 @@ jobs:
         run: |
           echo "Validando estrutura do repositório"
           ls -la
-
-O GitHub recomenda colocar os workflows dentro de .github/wor
