@@ -2,12 +2,10 @@ name: Validacao simples
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   testes:
@@ -20,11 +18,10 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "24"
-          cache: "npm"
+          node-version: 24.
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm install
 
       - name: Executar testes
         run: npm test
