@@ -1,2 +1,15 @@
-# modulo_4
-repo para atividades relacionadas ao módulo 4 de devops
+# Projeto de validação
+
+Projeto simples criado para demonstrar o uso de Git, GitHub, GitHub Actions
+e Dependabot.
+
+## Requisitos
+
+- Git
+- Node.js
+- npm
+
+## Instalação
+
+```bash
+npm install
