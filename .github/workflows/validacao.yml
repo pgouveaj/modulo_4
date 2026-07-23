@@ -1,0 +1,36 @@
+name: Validacao simples
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes
+        run: npm test
+
+      - name: Validar arquivos
+        run: |
+          echo "Validando estrutura do repositório"
+          ls -la
+
+O GitHub recomenda colocar os workflows dentro de .github/wor
