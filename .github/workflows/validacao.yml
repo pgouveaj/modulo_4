@@ -28,7 +28,7 @@ jobs:
       - name: Executar testes
         run: npm test
 
-      - name: Validar arquivos
+      - name: Validar estrutura
         run: |
           echo "Validando estrutura do repositório"
           ls -la
