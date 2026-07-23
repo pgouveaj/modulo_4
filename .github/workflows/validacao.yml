@@ -1,21 +1,32 @@
-name: Workflow de Integração Contínua
+name: Validacao simples
 
 on:
+  push:
+    branches: [ main ]
+
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   testes:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 24.
-        
-    - run: npm install
-    - run: npm test
+      - name: Baixar repositório
+        uses: actions/checkout@v4
 
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes
+        run: npm test
+
+      - name: Validar estrutura
+        run: |
+          echo "Validando estrutura do repositório"
+          ls -la
